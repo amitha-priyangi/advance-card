@@ -1,0 +1,115 @@
+:root{
+    --first-color:#000;
+    --second-color:#A9A9A9;
+    --third-color:#FF8C00;
+    --fourth-color:#800000;
+}
+*::backdrop,::after{
+    box-sizing: border-box;
+}
+body{
+    padding: 0;
+    margin: 0;
+}
+h1,p{
+    margin: 0;
+}
+img{
+    max-width: 100vh;
+    height: auto;
+}
+a{
+    text-decoration: none;
+}
+.container{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--first-color);
+}
+.card{
+    width: 18rem;
+    height: 34rem;
+    background-color: var(--second-color);
+    padding: 10px 20px 0px;
+    border-radius: 1.5rem;
+    box-shadow: 4px 6px 8px gray;
+    overflow: hidden;
+
+}
+.card-img{
+    width: 250px;
+    margin-left: 25px;
+    margin-top: 10px;
+    filter: drop-shadow(6px 10px 8px black);
+    position: absolute
+}
+.card-data{
+    transform: translateY(21rem);
+    text-align: center;
+}
+.product-title{
+    font-size: 40px;
+    font-weight: 600;
+    color: #c66d00;
+    margin-bottom: 10px;
+
+}
+.product-price{
+    font-size: 30px;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+.product-dec{
+    font-size: 17px;
+    color: var(--fourth-color);
+    text-align: center;
+    opacity: 0;
+    margin-bottom: 10px;
+
+}
+.button{
+    font-size: 30px;
+    display: block;
+    width: max-content;
+    background-color: var(--third-color);
+    padding: 1rem 1.8rem;
+    font-weight: 600;
+    color: #000;
+    border-top-right-radius: 15px;
+    transform: .5s;
+    opacity: 0;
+}
+.button:hover{
+    box-shadow: 3px 7px 8px rgba(0, 0, 0, 0.728);
+}
+.card-data,
+.card-img, 
+.product-dec, 
+.product-price, 
+.product-title{
+    transform: .5s;
+}
+.card:hover .card-img{
+    transform: translateY(-9rem) scale(0.8);
+
+}
+.card:hover .product-title{
+    transform: translateY(-9rem);
+    font-size: 50px;
+    font-weight: 800;
+}
+.card:hover .product-price{
+    transform: translateY(-9rem);
+    font-weight: 900;
+    font-size: 40px;
+}
+.card:hover .product-dec{
+    transform: translateY(-9rem);
+    opacity: 1;
+}
+.card:hover .button{
+    transform: translateY(-9rem);
+    opacity: 1;
+}
